@@ -2,43 +2,31 @@ package LineComparionOpps;
 
 public class LineComparisonOOPs {
 
-	int x1;
-	int x2;
-	int y1;
-	int y2;
-	int x3;
-	int x4;
-	int y3;
-	int y4;
+	int x1 = 2;
+	int x2 = 4;
+	int y1 = 6;
+	int y2 = 10;
 	
-	Integer line1 = (int) Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
+	int x3 = 4;
+	int x4 = 8;
+	int y3 = 10;
+	int y4 = 14;
 	
-	 Integer line2 = (int) Math.sqrt((y4 - y3) * (y4 - y3) + (x4 - x3) * (x4 - x3));
-	
-	public LineComparisonOOPs(int x1, int x2, int y1, int y2, int x3, int x4, int y3, int y4) {
+	public void Comparemethod() {
 		
-		x1 = x1;
-		x2 = x2;
-		y1 = y1;
-		y2 = y2;
+		Integer line1 = (int) Math.sqrt((y2 - y1) * (y2 - y1) + (x2 - x1) * (x2 - x1));
 		
-		x3 = x3;
-		x4 = x4;
-		y3 = y3;
-		y4 = y4;
+		Integer line2 = (int) Math.sqrt((y4 - y3) * (y4 - y3) + (x4 - x3) * (x4 - x3));
+		
+			
+			System.out.println(line1.compareTo(line2));
+			System.out.println("Hence, line1 is less than line2");
+		
 	}
 	
-	
-	public static void main(String []args) {
+	public static void main(String [] args) {
 		
-		LineComparisonOOPs UC = new LineComparisonOOPs(2, 4, 6, 10, 4, 6, 8, 12);
-		
-		
-		if(UC.line1.equals(UC.line2))
-			
-			System.out.println("Lengths of both the lines are equal");
-		
-		else
-			System.out.println("Not equal");
+		LineComparisonOOPs Cmp = new LineComparisonOOPs();
+		Cmp.Comparemethod();
 	}
 }
